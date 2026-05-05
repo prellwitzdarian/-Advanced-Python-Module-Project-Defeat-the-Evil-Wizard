@@ -190,7 +190,8 @@ def battle(player, wizard):
         else:
             print("Invalid choice. Try again.")
 
-        if wizard.health > 0:
+        if turn_taken and wizard.health > 0:
+            print("Wizard's turn begins.")
             wizard.regenerate()
             wizard.attack(player)
 
